@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<Info>
+		<Name>Iconsquare</Name>
+		<Authorize>https://instagram.com/oauth/authorize/?client_id=[ID]&amp;redirect_uri=[RedirectUri]&amp;response_type=[ResponseType]&amp;scope=[Scope]</Authorize>
+		<ClientID>2b5a0c10371c4784935b03e5619e94ca</ClientID>
+		<RedirectUri>http://iconosquare.com</RedirectUri>
+		<ResponseType>code</ResponseType>
+		<Scope>likes+comments+relationships</Scope>
+		<MaxReq>aaa</MaxReq>
+	</Info>
+	
+	<Link>
+		<Like>http://iconosquare.com/controller_ajax.php</Like>
+		<Follow>http://iconosquare.com/controller_ajax.php</Follow>
+		<Comment>http://iconosquare.com/controller_ajax.php</Comment>
+		<Feed>http://iconosquare.com/viewer.php</Feed>
+	</Link>
+	
+	<Header>
+		<Host>iconosquare.com</Host>
+		<Accept>*/*</Accept>
+		<Accept-Language>it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3</Accept-Language>
+		<Accept-Encoding>gzip, deflate</Accept-Encoding>
+		<ContentType>application/x-www-form-urlencoded; charset=UTF-8</ContentType>
+		<X-Requested-With>XMLHttpRequest</X-Requested-With>
+		<Pragma>no-cache</Pragma>
+		<Cache-Control>no-cache</Cache-Control>
+	</Header>
+	
+	<reqData>
+		<Like>[POST]action=postLike&amp;photo_id=[MediaID][_UserID]&amp;m=g</Like>
+		<Follow>[POST]action=relationship&amp;user_id=[UserID]&amp;relation=follow</Follow>
+		<Comment>[POST]action=postComment&amp;photo_id=[MediaID][_UserID]&amp;comment=[Data]</Comment>
+	</reqData>
+	
+	<responseData>
+		<Like>ok</Like>
+		<Follow>1</Follow>
+		<Comment>[NUMBER]</Comment>
+	</responseData>
+</Config>

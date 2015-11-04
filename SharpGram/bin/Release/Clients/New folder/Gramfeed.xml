@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<Info>
+		<Name>Gramfeed</Name>
+		<Authorize>https://instagram.com/oauth/authorize/?scope=[Scope]&amp;redirect_uri=[RedirectUri]&amp;response_type=[ResponseType]&amp;client_id=[ID]</Authorize>
+		<ClientID>b59fbe4563944b6c88cced13495c0f49</ClientID>
+		<RedirectUri>http://www.gramfeed.com/oauth/callback?page=</RedirectUri>
+		<ResponseType>code</ResponseType>
+		<Scope>comments+likes+relationships</Scope>
+		<MaxReq>The maximum number of requests per hour has been exceeded.</MaxReq>
+	</Info>
+	
+	<Link>
+		<Like>http://www.gramfeed.com/instagram/api/v1/media/[ID][_UserID]/likes?action=post&amp;position=modal&amp;user=[UserID]</Like>
+		<Follow>http://www.gramfeed.com/instagram/api/v1/users/[UserID]/relationship?action=follow&amp;position=user</Follow>
+		<Comment>http://www.gramfeed.com/instagram/api/v1/media/[MediaID][_UserID]/comments?action=post&amp;position=modal</Comment>
+		<Feed>http://www.gramfeed.com</Feed>
+	</Link>
+	
+	<Header>
+		<Host>websta.me</Host>
+		<Accept>application/json, text/javascript, */*; q=0.01</Accept>
+		<Accept-Language>it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3</Accept-Language>
+		<Accept-Encoding>gzip, deflate</Accept-Encoding>
+		<ContentType>application/x-www-form-urlencoded; charset=UTF-8</ContentType>
+		<X-Requested-With>XMLHttpRequest</X-Requested-With>
+		<Pragma>no-cache</Pragma>
+		<Cache-Control>no-cache</Cache-Control>
+	</Header>
+	
+	<reqData>
+		<Like>[POST]method=post&amp;access_token=[Token]</Like>
+		<Follow>[POST]method=post&amp;access_token=[Token]&amp;action=follow</Follow>
+		<Comment>[POST]method=post&amp;access_token=[Token]&amp;text=[Data]</Comment>
+	</reqData>
+	
+	<responseData>
+		<Like>LIKED</Like>
+		<Follow>OK</Follow>
+		<Comment>OK</Comment>
+	</responseData>
+</Config>

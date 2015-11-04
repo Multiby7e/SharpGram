@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<Info>
+		<Name>Collecto</Name>
+		<Authorize>https://instagram.com/oauth/authorize/?client_id=[ID]&amp;redirect_uri=[RedirectUri]&amp;response_type=[ResponseType]&amp;scope=[Scope]</Authorize>
+		<ClientID>2b5a0c10371c4784935b03e5619e94ca</ClientID>
+		<RedirectUri>http://collec.to/login</RedirectUri>
+		<ResponseType>code</ResponseType>
+		<Scope>likes+comments+relationships</Scope>
+		<MaxReq>null</MaxReq>
+	</Info>
+	
+	<Link>
+		<Like>http://collec.to/</Like>
+		<Follow>http://collec.to/</Follow>
+		<Comment>http://collec.to/</Comment>
+		<Feed>http://collec.to/dashboard/</Feed>
+	</Link>
+	
+	<Header>
+		<Host>collec.to</Host>
+		<Accept>application/json, text/javascript, */*; q=0.01</Accept>
+		<Accept-Language>it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3</Accept-Language>
+		<Accept-Encoding>gzip, deflate</Accept-Encoding>
+		<ContentType>application/x-www-form-urlencoded; charset=UTF-8</ContentType>
+		<X-Requested-With>XMLHttpRequest</X-Requested-With>
+		<Pragma>no-cache</Pragma>
+		<Cache-Control>no-cache</Cache-Control>
+	</Header>
+	
+	<reqData>
+		<Like>[POST]json=like&amp;photoid=[MediaID][_UserID]</Like>
+		<Follow>[GET]http://collec.to/instagram.php?json=follow&amp;codiceutente=[UserID]</Follow>
+		<Comment>NO_COMMENT</Comment>
+	</reqData>
+	
+	<responseData>
+		<Like>200</Like>
+		<Follow>200</Follow>
+		<Comment>200</Comment>
+	</responseData>
+</Config>

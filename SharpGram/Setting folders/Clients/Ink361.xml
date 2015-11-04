@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+    <Info>
+        <Name>Ink361</Name>
+		<Authorize>https://instagram.com/oauth/authorize/?client_id=[ID]&amp;response_type=[ResponseType]&amp;redirect_uri=[RedirectUri]&amp;scope=[Scope]</Authorize>
+		<ClientID>2e7067c2b22a4cbdb6b2e0e89cbd6537</ClientID>
+		<RedirectUri>http://data.ink361.com/v1/auth?instagram=1</RedirectUri>
+		<ResponseType>code</ResponseType>
+		<Scope>basic+comments+relationships+likes</Scope>
+		<MaxReq>The maximum number of requests per hour has been exceeded.</MaxReq>
+    </Info>
+    
+	<Link>
+        <Like>https://data.ink361.com/v1/media/ig-[MediaID][_UserID]/likes</Like>
+        <Follow>https://data.ink361.com/v1/users/ig-[UserID]/relationship</Follow>
+        <Comment>https://data.ink361.com/v1/media/ig-[MediaID][_UserID]/comments</Comment>
+        <Feed>https://www.ink361.com/app/feed</Feed>
+    </Link>
+	
+    <Header>
+        <Host>data.ink361.com</Host>
+        <Accept>application/json</Accept>
+        <Accept-Language>it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3</Accept-Language>
+        <Accept-Encoding>gzip, deflate</Accept-Encoding>
+        <ContentType>application/x-www-form-urlencoded; charset=utf-8</ContentType>
+        <X-Requested-With>XMLHttpRequest</X-Requested-With>
+        <Pragma>no-cache</Pragma>
+        <Cache-Control>no-cache</Cache-Control>
+    </Header>
+	
+    <reqData>
+        <Like>[POST]_requestMethod=POST&amp;id=ig-[MediaID][_UserID]&amp;count=50</Like>
+        <Follow>[POST]action=follow&amp;count=50</Follow>
+        <Comment>[POST]text=[Data]&amp;_requestMethod=POST&amp;count=50</Comment>
+    </reqData>
+	
+    <responseData>
+        <Like>200</Like>
+        <Follow>200</Follow>
+        <Comment>200</Comment>
+    </responseData>
+</Config>

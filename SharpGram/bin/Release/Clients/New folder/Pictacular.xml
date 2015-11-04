@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+    <Info>
+        <Name>Pictacular</Name>
+		<Authorize>https://instagram.com/oauth/authorize/?client_id=[ID]&amp;redirect_uri=[RedirectUri]&amp;scope=[Scope]&amp;response_type=[ResponseType]</Authorize>
+		<ClientID>2b5a0c10371c4784935b03e5619e94ca</ClientID>
+		<RedirectUri>http://www.pictacular.co/</RedirectUri>
+		<ResponseType>token</ResponseType>
+		<Scope>comments+likes+relationships</Scope>
+		<MaxReq>aaa</MaxReq>
+    </Info>
+	
+    <Link>
+        <Like>http://www.pictacular.co/media/[MediaID][_UserID]/likes</Like>
+        <Follow>http://www.pictacular.co/users/[UserID]/relationship</Follow>
+        <Comment>http://www.pictacular.co/media/[MediaID][_UserID]/comments</Comment>
+		<Feed>www.pictacular.co</Feed>
+    </Link>
+	
+    <Header>
+        <Host>www.pictacular.co</Host>
+        <Accept>*/*</Accept>
+        <Accept-Language>it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3</Accept-Language>
+        <Accept-Encoding>gzip, deflate</Accept-Encoding>
+        <ContentType>application/x-www-form-urlencoded; charset=UTF-8</ContentType>
+        <X-Requested-With>XMLHttpRequest</X-Requested-With>
+        <Pragma>no-cache</Pragma>
+        <Cache-Control>no-cache</Cache-Control>
+    </Header>
+	
+    <reqData>
+        <Like>[POST]media</Like>
+        <Follow>[POST]action=follow</Follow>
+        <Comment>[POST]text=[Data]</Comment>
+    </reqData>
+	
+    <responseData>
+        <Like>Internal Server Error</Like>
+        <Follow>follows</Follow>
+        <Comment>Internal Server Error</Comment>
+    </responseData>
+</Config>

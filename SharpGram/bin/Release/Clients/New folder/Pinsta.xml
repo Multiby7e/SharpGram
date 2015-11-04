@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<Info>
+		<Name>Pinsta</Name>
+		<ClientID>https://instagram.com/oauth/authorize/?client_id=5a988f543d374fcd893875a9fc620896&amp;redirect_uri=https://tofo.me/OAuth/Callback&amp;response_type=code&amp;scope=basic+comments+relationships+likes</ClientID>
+		<MaxReq>MaxReq</MaxReq>
+	</Info>
+	<Link>
+		<Feed>https://tofo.me/home</Feed>
+		<Like>https://tofo.me/MultiView/LikeMedia</Like>
+		<Follow>https://tofo.me/MultiView/FollowUser</Follow>
+		<Comment>https://tofo.me/MultiView/CommentMedia</Comment>
+		<Tag>Tag</Tag>
+	</Link>
+	<Header>
+		<Host>tofo.me</Host>
+		<Accept>*/*</Accept>
+		<Accept-Language>it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3</Accept-Language>
+		<Accept-Encoding>gzip, deflate</Accept-Encoding>
+		<ContentType>application/x-www-form-urlencoded; charset=UTF-8</ContentType>
+		<X-Requested-With>XMLHttpRequest</X-Requested-With>
+		<Pragma>no-cache</Pragma>
+		<Cache-Control>no-cache</Cache-Control>
+	</Header>
+	<reqData>
+		<Like>[POST]mediaID=[ID]</Like>
+		<Follow>[POST]POSTDATA=userID=[ID]</Follow>
+		<Comment>[POST]POSTDATA=mediaID=[ID]&amp;commentText=[DATA]</Comment>
+	</reqData>
+	<responseData>
+		<Like>200</Like>
+		<Follow>200</Follow>
+		<Comment>200</Comment>
+	</responseData>
+	<Regex>
+		<GetPhotoID>"id\":\"[0-9]{19}\",\"display_src</GetPhotoID>
+		<GetPhotoIDReplace1>"id":"</GetPhotoIDReplace1>
+		<GetPhotoIDReplace2>","display_src</GetPhotoIDReplace2>
+		<GetPhotoOwner>owner":{"id":"[0-9]{10}"},"comments</GetPhotoOwner>
+		<GetPhotoOwnerReplace1>owner":{"id":"</GetPhotoOwnerReplace1>
+		<GetPhotoOwnerReplace2>"},"comments</GetPhotoOwnerReplace2>
+		<GetPhotoImage>&lt;img src=""(.*?)"" alt=""""</GetPhotoImage>
+		<GetPhotoImageReplace1>&lt;img src=""</GetPhotoImageReplace1>
+		<GetPhotoImageReplace2>"" alt=""""</GetPhotoImageReplace2>
+	</Regex>
+</Config>

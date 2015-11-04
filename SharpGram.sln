@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpGram", "SharpGram\SharpGram.csproj", "{46DC5B61-846F-4275-B341-3BA30ECACBD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46DC5B61-846F-4275-B341-3BA30ECACBD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46DC5B61-846F-4275-B341-3BA30ECACBD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46DC5B61-846F-4275-B341-3BA30ECACBD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46DC5B61-846F-4275-B341-3BA30ECACBD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
